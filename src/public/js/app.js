@@ -1,6 +1,14 @@
 // front
 
+const messageList = document.querySelector("ul");
+const nickForm = document.querySelector("#nick");
+const messageForm = document.querySelector("#message");
 const socket = new WebSocket(`ws://${window.location.host}`);
+
+function makeMessage(type, payload) {
+    const msg = {type, payload};
+    return JSON.stringify(msg);
+}
 
 // 방법1
 // socket.addEventListener("close", () => {
@@ -17,9 +25,28 @@ socket.addEventListener("open", () => {
 })
 
 socket.addEventListener("message", (message) => {
-    console.log("뭐라고 보냈을까?", message.data)
+    const li = document.createElement("li");
+    const span = document.querySelector("span")
+    li.innerText = message.data;
+    messageList.append(li);
+    span.innerText = nickForm.input.value
 })
 
-setTimeout(() => {
-    socket.send("이것은 3초뒤에 보내지는 메세지.")
-}, 3000);
+
+
+function handleSubmit(e) {
+    e.preventDefault();
+    const input = messageForm.querySelector("input");
+    socket.send(makeMessage("new_message", input.value));
+    input.value = "";
+}
+
+function handleNickSubmit (e) {
+    e.preventDefault();
+    const input = nickForm.querySelector("input");
+    socket.send(makeMessage("nickname", input.value));
+    input.value = "";
+}
+
+messageForm.addEventListener("submit", handleSubmit)
+nickForm.addEventListener("submit", handleNickSubmit)

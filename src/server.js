@@ -22,16 +22,26 @@ function handleSocketClose (){
     console.log("server.js 연결해제")
 }
 
+const sockets = [];
+
+
 wss.on("connection", (socket) => {
+    sockets.push(socket);
+    socket["nickname"] = "ghost" 
     console.log("server.js 연결")
     // 1 방법
     // socket.on("close", () => console.log("server.js 연결해제"))
     // 2 방법
     socket.on("close", handleSocketClose)
-    socket.on("message", message => {
-        console.log(message.toString('utf8'));
+    socket.on("message", msg => {
+        const message = JSON.parse(msg)
+        switch(message.type){
+            case "new_message":
+                sockets.forEach((aSocket) => aSocket.send(`${socket.nickname} : ${message.payload.toString('utf8')}`));
+            case "nickname":
+                socket["nickname"] = message.payload;
+        }
     });
-    socket.send("이것은 최초 메세지.")
 });
 
 server.listen(3000, handleListen);

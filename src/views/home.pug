@@ -9,7 +9,10 @@ html(lang="en")
         header 
             h1 Joom
         main 
-
+            div#welcome
+                form
+                    input(type="text", placeholder="room name", required)
+                    button Enter Room
         //- 브라우저에 socket.io를 설치해주어야 함.
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")

@@ -10,9 +10,16 @@ html(lang="en")
             h1 Joom
         main 
             div#welcome
+                h3 채팅방이름을 입력하여 입장하세요.
                 form
                     input(type="text", placeholder="room name", required)
                     button Enter Room
+            div#room 
+                h3 
+                ul
+                form
+                    input(placeholder="message", required, type="text")
+                    button Send
         //- 브라우저에 socket.io를 설치해주어야 함.
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js")

@@ -23,12 +23,18 @@ io.on("connection", (socket) => {
     socket.onAny((e) => {
         console.log(e)
     })
-    socket.on("enter_room", (rommName, done) => {
-          socket.join(rommName)
-        setTimeout(() => {
-            done("hihihihi~~")
-        }, 15000);
+    socket.on("enter_room", (roomName, done) => {
+        socket.join(roomName)
+        done();
+        socket.to(roomName).emit("enter");
     });
+    socket.on("disconnecting", () => {
+        socket.rooms.forEach(room => socket.to(room).emit("leave"))
+    })
+    socket.on("new_message", (msg, room, done) => {
+        socket.to(room).emit("new_message", msg);
+        done();
+    })
 })
 
 

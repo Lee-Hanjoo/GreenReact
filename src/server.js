@@ -18,7 +18,7 @@ const handleListen = () => console.log(`http://localhost:3000`)
 const server = http.createServer(app); 
 const io = SocketIo(server);
 
-// 백에서 socket을 받을 준비가 되었음.
+// 백에서 socket을 받을 준비가 되었음..
 io.on("connection", (socket) => {
     socket.onAny((e) => {
         console.log(e)

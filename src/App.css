@@ -1,0 +1,34 @@
+/* App.css */
+
+.info{
+  width:60%; margin:100px auto;
+}
+
+dl{
+  counter-reset:list-number;
+  margin: 0;
+}
+dt{
+  font-weight: bold;
+  background-color: #eee; 
+  padding:10px 0;
+  text-align: center;
+}
+dd{
+  padding:14px 0; margin:0;
+  border-bottom:1px solid #ddd;
+  counter-increment:list-number;
+}
+dd::before{
+  content:counter(list-number) '. ';
+}
+
+*{line-height: 2;}
+
+header {
+  text-align: center;
+  padding-top: 50px;
+}
+header a {
+  margin: 0 20px;
+}

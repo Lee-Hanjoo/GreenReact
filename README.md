@@ -1,2 +1,1 @@
-### Zoom Clone using NodeJS, WebRTC and Websockets
-Zoom 클론코딩 작업입니다.
+### 그린컴퓨터아카데미 react 강의

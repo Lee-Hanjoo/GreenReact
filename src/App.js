@@ -5,6 +5,7 @@ import Not from './pages/Not';
 import RouterJs from './pages/Router';
 import './App.css';
 import StateProps from './pages/StateProps';
+import Deploy from './pages/Deploy';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/*" element={<Not />}    />
           <Route path="/router" element={<RouterJs />}    />
           <Route path="/state" element={<StateProps />}    />
+          <Route path="/git" element={<Deploy />}    />
       </Routes>
     </Router>
   );

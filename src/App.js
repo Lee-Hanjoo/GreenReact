@@ -8,7 +8,7 @@ import StateProps from './pages/StateProps';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/GreenReact'>
       <header>
         <Link to="/">HOME</Link>
         <Link to="/css">CSS</Link>

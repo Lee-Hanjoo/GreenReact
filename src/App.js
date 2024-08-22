@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Link, Routes } from 'react-router-dom'
 import Main from './pages/Main';
 import Css from './pages/Css';
 import Not from './pages/Not';
@@ -8,7 +8,7 @@ import StateProps from './pages/StateProps';
 
 function App() {
   return (
-    <Router basename='/GreenReact'>
+    <Router>
       <header>
         <Link to="/">HOME</Link>
         <Link to="/css">CSS</Link>

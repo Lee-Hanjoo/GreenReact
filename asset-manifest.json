@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GreenReact/static/css/main.f0c950ee.css",
-    "main.js": "/GreenReact/static/js/main.2fb49488.js",
+    "main.js": "/GreenReact/static/js/main.fc677350.js",
     "static/js/453.53cb6ab8.chunk.js": "/GreenReact/static/js/453.53cb6ab8.chunk.js",
     "index.html": "/GreenReact/index.html",
     "main.f0c950ee.css.map": "/GreenReact/static/css/main.f0c950ee.css.map",
-    "main.2fb49488.js.map": "/GreenReact/static/js/main.2fb49488.js.map",
+    "main.fc677350.js.map": "/GreenReact/static/js/main.fc677350.js.map",
     "453.53cb6ab8.chunk.js.map": "/GreenReact/static/js/453.53cb6ab8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0c950ee.css",
-    "static/js/main.2fb49488.js"
+    "static/js/main.fc677350.js"
   ]
 }

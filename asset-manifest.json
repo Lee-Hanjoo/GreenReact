@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GreenReact/static/css/main.f0c950ee.css",
-    "main.js": "/GreenReact/static/js/main.d101abfb.js",
-    "static/js/453.53cb6ab8.chunk.js": "/GreenReact/static/js/453.53cb6ab8.chunk.js",
-    "index.html": "/GreenReact/index.html",
-    "main.f0c950ee.css.map": "/GreenReact/static/css/main.f0c950ee.css.map",
-    "main.d101abfb.js.map": "/GreenReact/static/js/main.d101abfb.js.map",
-    "453.53cb6ab8.chunk.js.map": "/GreenReact/static/js/453.53cb6ab8.chunk.js.map"
+    "main.css": "/GreenReactTutorial/static/css/main.f0c950ee.css",
+    "main.js": "/GreenReactTutorial/static/js/main.faeb5cf8.js",
+    "static/js/453.53cb6ab8.chunk.js": "/GreenReactTutorial/static/js/453.53cb6ab8.chunk.js",
+    "index.html": "/GreenReactTutorial/index.html",
+    "main.f0c950ee.css.map": "/GreenReactTutorial/static/css/main.f0c950ee.css.map",
+    "main.faeb5cf8.js.map": "/GreenReactTutorial/static/js/main.faeb5cf8.js.map",
+    "453.53cb6ab8.chunk.js.map": "/GreenReactTutorial/static/js/453.53cb6ab8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0c950ee.css",
-    "static/js/main.d101abfb.js"
+    "static/js/main.faeb5cf8.js"
   ]
 }
